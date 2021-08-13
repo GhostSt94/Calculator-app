@@ -9,7 +9,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
-  - [Built with](#built-with)(#continued-development)
+  - [Built with](#built-with)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
