@@ -68,7 +68,7 @@ del.addEventListener('click',()=>{
 })
 
 equal.addEventListener('click',()=>{
-    inp_text=isNaN(eval(inp_text))? '':Math.round(eval(inp_text)).toFixed(2);
+    inp_text=isNaN(eval(inp_text))? '':eval(inp_text);
     input.value=inp_text;
 })
 
