@@ -256,4 +256,4 @@ function getCookie(cname) {
         }
         title.classList.add('theme3_title');
         range.classList.add('theme3_range');
-    }
+    } 
