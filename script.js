@@ -4,13 +4,57 @@ var del=document.querySelector('.del');
 var reset =document.querySelector('.res');
 var equal = document.querySelector('.equal');
 
+
 var inp_text='';
 
 for(let i=0;i<numbers.length;i++){
     numbers[i].addEventListener('click',()=>{
-        inp_text += numbers[i].innerHTML;
-        input.value=inp_text;
+
+        if(numbers[i].classList.contains('op') && !numbers[i].classList.contains('dot')){
+            var op = inp_text.slice(-1);
+            if(op=='+'||op=='-'||op=='*'||op=='/'||op=='.' && op==null || inp_text==''){
+            
+            }else{
+                inp_text += numbers[i].innerHTML;
+                input.value=inp_text;
+            }
+            
+        }else if(numbers[i].classList.contains('dot')){
+            var test = inp_text.slice(-1);
+            var op = ['+','-','*','/','.'];
+            var table=[];
+            for(let i=0;i<op.length;i++){
+                table[i]=inp_text.lastIndexOf(op[i]);
+            }
+            if(Math.max.apply(null,table)==table[4] && table[4]!= -1){
+            
+            }
+            else if(test=='+' ||test=='-' ||test=='/' ||test=='*' ||test=='.' & test==null || inp_text==''){
+                
+                
+            }else{
+                inp_text += numbers[i].innerHTML;
+                input.value=inp_text;
+            }
+        }
+        else{
+            
+            inp_text += numbers[i].innerHTML;
+            input.value=inp_text;
+        }
+        
     })
+}
+function check(text){
+    var op = ['+','-','*','/','.'];
+    var table=[];
+    for(let i=0;i<op.length;i++){
+        table[i]=text.lastIndexOf(op[i]);
+    }
+    if(Math.max.apply(Math,table)==table[4]){
+        
+    }
+    else{}
 }
 
 reset.addEventListener('click',()=>{
